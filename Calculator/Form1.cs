@@ -43,9 +43,10 @@ namespace Calculator
 			//}
 			//else
 			//{
-				save_value();
-				operation = '+';
+			save_value();
+			operation = '+';
 			//}
+
 		}
 
 		private void Btn_minus_Click(object sender, EventArgs e)
@@ -122,6 +123,17 @@ namespace Calculator
 		{
 			save_value();
 			operation = '/';
+		}
+
+		private void Btn_backspace_Click(object sender, EventArgs e)
+		{
+			txt_input.Text = "";
+		}
+
+		private void Btn_c_Click(object sender, EventArgs e)
+		{
+			txt_display.Text = "";
+			txt_input.Text = "";
 		}
 	}
 }
