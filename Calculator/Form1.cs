@@ -135,5 +135,19 @@ namespace Calculator
 			txt_display.Text = "";
 			txt_input.Text = "";
 		}
+
+		private void Txt_Premium_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void Form1_Load(object sender, EventArgs e)
+		{
+			var popup = new Form2();
+			popup.ShowDialog();
+			var status = popup.Status;
+			popup.Dispose();
+			if (status == false) { this.Dispose(); }
+		}
 	}
 }

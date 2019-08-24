@@ -43,12 +43,12 @@
 			this.btn_divide = new System.Windows.Forms.Button();
 			this.btn_equal = new System.Windows.Forms.Button();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+			this.btn_c = new System.Windows.Forms.Button();
 			this.btn_1 = new System.Windows.Forms.Button();
 			this.txt_Premium = new System.Windows.Forms.Label();
 			this.txt_input = new System.Windows.Forms.Label();
 			this.txt_display = new System.Windows.Forms.Label();
 			this.btn_ce = new System.Windows.Forms.Button();
-			this.btn_c = new System.Windows.Forms.Button();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -264,6 +264,18 @@
 			this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
 			this.tableLayoutPanel1.TabIndex = 17;
 			// 
+			// btn_c
+			// 
+			this.btn_c.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.btn_c.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_c.Location = new System.Drawing.Point(691, 216);
+			this.btn_c.Name = "btn_c";
+			this.btn_c.Size = new System.Drawing.Size(106, 65);
+			this.btn_c.TabIndex = 25;
+			this.btn_c.Text = "C";
+			this.btn_c.UseVisualStyleBackColor = true;
+			this.btn_c.Click += new System.EventHandler(this.Btn_c_Click);
+			// 
 			// btn_1
 			// 
 			this.btn_1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -290,6 +302,7 @@
 			this.txt_Premium.TabIndex = 23;
 			this.txt_Premium.Text = "Premium $5";
 			this.txt_Premium.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.txt_Premium.Click += new System.EventHandler(this.Txt_Premium_Click);
 			// 
 			// txt_input
 			// 
@@ -329,18 +342,6 @@
 			this.btn_ce.UseVisualStyleBackColor = true;
 			this.btn_ce.Click += new System.EventHandler(this.Btn_backspace_Click);
 			// 
-			// btn_c
-			// 
-			this.btn_c.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.btn_c.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_c.Location = new System.Drawing.Point(691, 216);
-			this.btn_c.Name = "btn_c";
-			this.btn_c.Size = new System.Drawing.Size(106, 65);
-			this.btn_c.TabIndex = 25;
-			this.btn_c.Text = "C";
-			this.btn_c.UseVisualStyleBackColor = true;
-			this.btn_c.Click += new System.EventHandler(this.Btn_c_Click);
-			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,6 +350,7 @@
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.Name = "Form1";
 			this.Text = "Form1";
+			this.Load += new System.EventHandler(this.Form1_Load);
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.tableLayoutPanel1.PerformLayout();
 			this.ResumeLayout(false);
