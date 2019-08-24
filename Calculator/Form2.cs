@@ -12,9 +12,9 @@ namespace Calculator
 {
 	public partial class Form2 : Form
 	{
-		private bool _status = false;
+		private bool? _status = null;
 
-		public bool Status { get { return _status; } }
+		public bool? Status { get { return _status; } }
 
 		public Form2()
 		{
@@ -29,6 +29,7 @@ namespace Calculator
 
 		private void Button3_Click(object sender, EventArgs e)
 		{
+			_status = false;
 			this.Close();
 		}
 	}

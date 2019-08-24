@@ -350,6 +350,7 @@
 			this.DonutBox.Location = new System.Drawing.Point(347, 358);
 			this.DonutBox.Name = "DonutBox";
 			this.DonutBox.Size = new System.Drawing.Size(166, 65);
+			this.DonutBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.DonutBox.TabIndex = 26;
 			this.DonutBox.TabStop = false;
 			this.DonutBox.Click += new System.EventHandler(this.PictureBox1_Click);

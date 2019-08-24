@@ -30,9 +30,9 @@
 		{
 			this.label1 = new System.Windows.Forms.Label();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-			this.button1 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
 			this.button3 = new System.Windows.Forms.Button();
+			this.button2 = new System.Windows.Forms.Button();
+			this.button1 = new System.Windows.Forms.Button();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -68,28 +68,6 @@
 			this.tableLayoutPanel1.Size = new System.Drawing.Size(746, 170);
 			this.tableLayoutPanel1.TabIndex = 1;
 			// 
-			// button1
-			// 
-			this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-			this.button1.Location = new System.Drawing.Point(137, 128);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(108, 34);
-			this.button1.TabIndex = 1;
-			this.button1.Text = "Yes";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.Button1_Click);
-			// 
-			// button2
-			// 
-			this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.button2.Location = new System.Drawing.Point(318, 128);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(108, 34);
-			this.button2.TabIndex = 2;
-			this.button2.Text = "Maybe";
-			this.button2.UseVisualStyleBackColor = true;
-			this.button2.Click += new System.EventHandler(this.Button1_Click);
-			// 
 			// button3
 			// 
 			this.button3.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -101,12 +79,35 @@
 			this.button3.UseVisualStyleBackColor = true;
 			this.button3.Click += new System.EventHandler(this.Button3_Click);
 			// 
+			// button2
+			// 
+			this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.button2.Location = new System.Drawing.Point(318, 128);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(108, 34);
+			this.button2.TabIndex = 2;
+			this.button2.Text = "Maybe?";
+			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.Button1_Click);
+			// 
+			// button1
+			// 
+			this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+			this.button1.Location = new System.Drawing.Point(137, 128);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(108, 34);
+			this.button1.TabIndex = 1;
+			this.button1.Text = "Yes";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.Button1_Click);
+			// 
 			// Form2
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(746, 170);
 			this.Controls.Add(this.tableLayoutPanel1);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.Name = "Form2";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Form2";

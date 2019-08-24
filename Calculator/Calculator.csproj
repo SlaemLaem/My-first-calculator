@@ -115,9 +115,24 @@
     <None Include="Resources\Donut.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\McDonalds_Mighty-McMuffin-Sausage.jpg">
+    <None Include="Resources\my wallet.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\US_Nickel_2013_Rev.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\US_One_Cent_Obv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1dollar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Half_dollar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

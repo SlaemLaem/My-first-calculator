@@ -139,12 +139,30 @@ namespace Calculator
 		private void PictureBox1_Click(object sender, EventArgs e)
 		{
 			DonutBox.Image = Images.Donut;
-			DonutBox.SizeMode = PictureBoxSizeMode.StretchImage;
 		}
 
 		private void Txt_Premium_Click(object sender, EventArgs e)
 		{
+			ShowPremiumWindow();
+		}
 
+		private void ShowPremiumWindow()
+		{
+			var popup = new Form3();
+			popup.ShowDialog();
+			var amount = popup.Amount;
+			popup.Dispose();
+
+			if (amount == 500)
+			{
+				txt_Premium.Dispose();
+			}
+			else if (amount > 500)
+			{
+				txt_Premium.BackColor = Color.Red;
+				txt_Premium.ForeColor = Color.Black;
+				txt_Premium.Text = "That's too much!\nClick to try again.";
+			}
 		}
 
 		private void Form1_Load(object sender, EventArgs e)
@@ -153,7 +171,8 @@ namespace Calculator
 			popup.ShowDialog();
 			var status = popup.Status;
 			popup.Dispose();
-			if (status == false) { this.Dispose(); }
+			if (status == null) { this.Dispose(); }
+			else if (status == false) { ShowPremiumWindow(); }
 		}
 	}
 }
