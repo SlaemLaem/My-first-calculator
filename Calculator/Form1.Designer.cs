@@ -43,13 +43,15 @@
 			this.btn_divide = new System.Windows.Forms.Button();
 			this.btn_equal = new System.Windows.Forms.Button();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+			this.btn_c = new System.Windows.Forms.Button();
 			this.btn_1 = new System.Windows.Forms.Button();
 			this.txt_Premium = new System.Windows.Forms.Label();
 			this.txt_input = new System.Windows.Forms.Label();
 			this.txt_display = new System.Windows.Forms.Label();
 			this.btn_ce = new System.Windows.Forms.Button();
-			this.btn_c = new System.Windows.Forms.Button();
+			this.DonutBox = new System.Windows.Forms.PictureBox();
 			this.tableLayoutPanel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.DonutBox)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// btn_2
@@ -249,6 +251,7 @@
 			this.tableLayoutPanel1.Controls.Add(this.txt_display, 0, 0);
 			this.tableLayoutPanel1.Controls.Add(this.btn_equal, 5, 4);
 			this.tableLayoutPanel1.Controls.Add(this.btn_ce, 4, 2);
+			this.tableLayoutPanel1.Controls.Add(this.DonutBox, 2, 5);
 			this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
 			this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
@@ -263,6 +266,18 @@
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
 			this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
 			this.tableLayoutPanel1.TabIndex = 17;
+			// 
+			// btn_c
+			// 
+			this.btn_c.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.btn_c.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_c.Location = new System.Drawing.Point(691, 216);
+			this.btn_c.Name = "btn_c";
+			this.btn_c.Size = new System.Drawing.Size(106, 65);
+			this.btn_c.TabIndex = 25;
+			this.btn_c.Text = "C";
+			this.btn_c.UseVisualStyleBackColor = true;
+			this.btn_c.Click += new System.EventHandler(this.Btn_c_Click);
 			// 
 			// btn_1
 			// 
@@ -329,17 +344,14 @@
 			this.btn_ce.UseVisualStyleBackColor = true;
 			this.btn_ce.Click += new System.EventHandler(this.Btn_backspace_Click);
 			// 
-			// btn_c
+			// DonutBox
 			// 
-			this.btn_c.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.btn_c.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_c.Location = new System.Drawing.Point(691, 216);
-			this.btn_c.Name = "btn_c";
-			this.btn_c.Size = new System.Drawing.Size(106, 65);
-			this.btn_c.TabIndex = 25;
-			this.btn_c.Text = "C";
-			this.btn_c.UseVisualStyleBackColor = true;
-			this.btn_c.Click += new System.EventHandler(this.Btn_c_Click);
+			this.DonutBox.Location = new System.Drawing.Point(347, 358);
+			this.DonutBox.Name = "DonutBox";
+			this.DonutBox.Size = new System.Drawing.Size(166, 65);
+			this.DonutBox.TabIndex = 26;
+			this.DonutBox.TabStop = false;
+			this.DonutBox.Click += new System.EventHandler(this.PictureBox1_Click);
 			// 
 			// Form1
 			// 
@@ -351,6 +363,7 @@
 			this.Text = "Form1";
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.tableLayoutPanel1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.DonutBox)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -377,6 +390,7 @@
 		private System.Windows.Forms.Label txt_Premium;
 		private System.Windows.Forms.Button btn_ce;
 		private System.Windows.Forms.Button btn_c;
+		private System.Windows.Forms.PictureBox DonutBox;
 	}
 }
 
