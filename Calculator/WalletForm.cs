@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace Calculator
 {
-	public partial class Form3 : Form
+	public partial class WalletForm : Form
 	{
 		private int _amount = 0;
 
 		public int Amount { get { return _amount; } }
 
-		public Form3()
+		public WalletForm()
 		{
 			InitializeComponent();
 			img_wallet.Image = Images.Wallet;

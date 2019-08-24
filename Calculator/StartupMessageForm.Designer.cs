@@ -1,6 +1,6 @@
 ﻿namespace Calculator
 {
-	partial class Form2
+	partial class StartupMessageForm
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -101,16 +101,16 @@
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.Button1_Click);
 			// 
-			// Form2
+			// StartupMessageForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(746, 170);
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-			this.Name = "Form2";
+			this.Name = "StartupMessageForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Form2";
+			this.Text = "JohnBobbyCalculator";
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.tableLayoutPanel1.PerformLayout();
 			this.ResumeLayout(false);

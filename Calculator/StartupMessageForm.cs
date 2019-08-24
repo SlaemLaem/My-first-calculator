@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace Calculator
 {
-	public partial class Form2 : Form
+	public partial class StartupMessageForm : Form
 	{
 		private bool? _status = null;
 
 		public bool? Status { get { return _status; } }
 
-		public Form2()
+		public StartupMessageForm()
 		{
 			InitializeComponent();
 		}

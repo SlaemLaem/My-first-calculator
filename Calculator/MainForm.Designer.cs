@@ -1,6 +1,6 @@
 ﻿namespace Calculator
 {
-	partial class Form1
+	partial class MainForm
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -355,14 +355,14 @@
 			this.DonutBox.TabStop = false;
 			this.DonutBox.Click += new System.EventHandler(this.PictureBox1_Click);
 			// 
-			// Form1
+			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.Controls.Add(this.tableLayoutPanel1);
-			this.Name = "Form1";
-			this.Text = "Form1";
+			this.Name = "MainForm";
+			this.Text = "JohnBobbyCalculator";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.tableLayoutPanel1.PerformLayout();

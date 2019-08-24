@@ -7,15 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Calculator
 {
-	public partial class Form1 : Form
+	public partial class MainForm : Form
 	{
-		private double? value = null;
-		private char operation = ' ';
+		private double? _value = null;
+		private char _operation = ' ';
+		private bool _premium = false;
 
-		public Form1()
+		public MainForm()
 		{
 			InitializeComponent();
 			txt_input.Text = "";
@@ -44,28 +46,28 @@ namespace Calculator
 			//else
 			//{
 			SaveValue();
-			operation = '+';
+			_operation = '+';
 			//}
 
 		}
 
 		private void Btn_minus_Click(object sender, EventArgs e)
 		{
-			if (txt_input.Text == "" && (operation != ' ' || txt_display.Text == ""))
+			if (txt_input.Text == "" && (_operation != ' ' || txt_display.Text == ""))
 			{
 				txt_input.Text = "-";
 			}
 			else
 			{
 				SaveValue();
-				operation = '-';
+				_operation = '-';
 			}
 		}
 
 		private void Btn_equal_Click(object sender, EventArgs e)
 		{
 			SaveValue();
-			operation = ' ';
+			_operation = ' ';
 		}
 
 		private void SaveValue()
@@ -73,41 +75,50 @@ namespace Calculator
 			//double tmp = 0;
 			if (double.TryParse(txt_input.Text, out double tmp))
 			{
-				if (value == null || operation == ' ')
+				txt_input.Text = "";
+				if (_value == null || _operation == ' ')
 				{
-					value = tmp;
-					txt_display.Text = value.ToString();
+					_value = tmp;
+					txt_display.Text = _value.ToString();
 				}
 				else
 				{
 					PerformCalculation(tmp);
 				}
+
+				if (_value == 58008)
+				{
+					if (_premium == false) { txt_display.Text = "Censored"; }
+					var caption = (_premium) ? "Premium feature" : "You pervert!!!";
+					var text = (_premium) ? "Ok, here you go.\n\n        ( . ) ( . )\n          )  .  (" : "Find your porn elsewhere...";
+					var confirmResult = MessageBox.Show(text, caption, MessageBoxButtons.OK);
+				}
 			}
-			Console.WriteLine(value);
-			txt_input.Text = "";
+			Console.WriteLine(_value);
 		}
 
 		private void PerformCalculation(double input)
 		{
-			switch (operation)
+			switch (_operation)
 			{
 				case '+':
-					value = (value ?? 0) + input;
+					_value = (_value ?? 0) + input;
 					break;
 				case '-':
-					value = (value ?? 0) - input;
+					_value = (_value ?? 0) - input;
 					break;
 				case 'x':
-					value = (value ?? 0) * input;
+					_value = (_value ?? 0) * input;
 					break;
 				case '/':
-					value = (value ?? 0) / input;
+					_value = (_value ?? 0) / input;
 					break;
 				default:
-					value = input;
+					_value = input;
 					break;
 			}
-			txt_display.Text = value.ToString();
+
+			txt_display.Text = _value.ToString();
 		}
 
 		private void Btn_x_Click(object sender, EventArgs e)
@@ -115,14 +126,14 @@ namespace Calculator
 			//if (txt_input.Text != "")
 			{
 				SaveValue();
-				operation = 'x';
+				_operation = 'x';
 			}
 		}
 
 		private void Btn_divide_Click(object sender, EventArgs e)
 		{
 			SaveValue();
-			operation = '/';
+			_operation = '/';
 		}
 
 		private void Btn_backspace_Click(object sender, EventArgs e)
@@ -132,6 +143,7 @@ namespace Calculator
 
 		private void Btn_c_Click(object sender, EventArgs e)
 		{
+			_value = null;
 			txt_display.Text = "";
 			txt_input.Text = "";
 		}
@@ -148,14 +160,14 @@ namespace Calculator
 
 		private void ShowPremiumWindow()
 		{
-			var popup = new Form3();
+			var popup = new WalletForm();
 			popup.ShowDialog();
 			var amount = popup.Amount;
 			popup.Dispose();
 
 			if (amount == 500)
 			{
-				txt_Premium.Dispose();
+				SavePremiumLicense();
 			}
 			else if (amount > 500)
 			{
@@ -167,12 +179,49 @@ namespace Calculator
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			var popup = new Form2();
-			popup.ShowDialog();
-			var status = popup.Status;
-			popup.Dispose();
-			if (status == null) { this.Dispose(); }
-			else if (status == false) { ShowPremiumWindow(); }
+			LoadPremiumLicense();
+			if (_premium == false)
+			{
+				var popup = new StartupMessageForm();
+				popup.ShowDialog();
+				var status = popup.Status;
+				popup.Dispose();
+				if (status == null) { this.Dispose(); }
+				else if (status == false) { ShowPremiumWindow(); }
+			}
+		}
+
+		private void SetPremium()
+		{
+			_premium = true;
+			txt_Premium.Dispose();
+			this.Text += " - PREMIUM";
+		}
+
+		private void SavePremiumLicense()
+		{
+			SetPremium();
+
+			var currenttime = DateTime.Now.AddMonths(1).ToString();
+			var bytes = System.Text.Encoding.UTF8.GetBytes(currenttime);
+			var license = System.Convert.ToBase64String(bytes);
+			var docPath = Directory.GetCurrentDirectory();
+
+			using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "License.txt")))
+			{
+				outputFile.WriteLine(license);
+			}
+		}
+
+		private void LoadPremiumLicense()
+		{
+			var docPath = Directory.GetCurrentDirectory();
+			var filecontent = System.IO.File.ReadAllText(Path.Combine(docPath, "License.txt"));
+			var bytes = System.Convert.FromBase64String(filecontent);
+			filecontent = System.Text.Encoding.UTF8.GetString(bytes);
+			DateTime license_expiration = DateTime.Parse(filecontent);
+
+			if (license_expiration >= DateTime.Now) { SetPremium(); }
 		}
 	}
 }

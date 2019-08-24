@@ -1,6 +1,6 @@
 ﻿namespace Calculator
 {
-	partial class Form3
+	partial class WalletForm
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -558,7 +558,7 @@
 			this.pictureBox30.Tag = "1";
 			this.pictureBox30.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Coin_MouseDown);
 			// 
-			// Form3
+			// WalletForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -600,9 +600,9 @@
 			this.Controls.Add(this.img_dime);
 			this.Controls.Add(this.img_wallet);
 			this.Controls.Add(this.label1);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-			this.Name = "Form3";
-			this.Text = "Form3";
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+			this.Name = "WalletForm";
+			this.Text = "Show me the money!";
 			((System.ComponentModel.ISupportInitialize)(this.img_wallet)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
