@@ -49,7 +49,9 @@
 			this.txt_input = new System.Windows.Forms.Label();
 			this.txt_display = new System.Windows.Forms.Label();
 			this.btn_ce = new System.Windows.Forms.Button();
+			this.DonutBox = new System.Windows.Forms.PictureBox();
 			this.tableLayoutPanel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.DonutBox)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// btn_2
@@ -249,6 +251,7 @@
 			this.tableLayoutPanel1.Controls.Add(this.txt_display, 0, 0);
 			this.tableLayoutPanel1.Controls.Add(this.btn_equal, 5, 4);
 			this.tableLayoutPanel1.Controls.Add(this.btn_ce, 4, 2);
+			this.tableLayoutPanel1.Controls.Add(this.DonutBox, 2, 5);
 			this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
 			this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
@@ -342,6 +345,15 @@
 			this.btn_ce.UseVisualStyleBackColor = true;
 			this.btn_ce.Click += new System.EventHandler(this.Btn_backspace_Click);
 			// 
+			// DonutBox
+			// 
+			this.DonutBox.Location = new System.Drawing.Point(347, 358);
+			this.DonutBox.Name = "DonutBox";
+			this.DonutBox.Size = new System.Drawing.Size(166, 65);
+			this.DonutBox.TabIndex = 26;
+			this.DonutBox.TabStop = false;
+			this.DonutBox.Click += new System.EventHandler(this.PictureBox1_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -353,6 +365,7 @@
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.tableLayoutPanel1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.DonutBox)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -379,6 +392,7 @@
 		private System.Windows.Forms.Label txt_Premium;
 		private System.Windows.Forms.Button btn_ce;
 		private System.Windows.Forms.Button btn_c;
+		private System.Windows.Forms.PictureBox DonutBox;
 	}
 }
 

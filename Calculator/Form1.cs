@@ -43,7 +43,7 @@ namespace Calculator
 			//}
 			//else
 			//{
-			save_value();
+			SaveValue();
 			operation = '+';
 			//}
 
@@ -57,21 +57,21 @@ namespace Calculator
 			}
 			else
 			{
-				save_value();
+				SaveValue();
 				operation = '-';
 			}
 		}
 
 		private void Btn_equal_Click(object sender, EventArgs e)
 		{
-			save_value();
+			SaveValue();
 			operation = ' ';
 		}
 
-		private void save_value()
+		private void SaveValue()
 		{
-			double tmp = 0;
-			if (double.TryParse(txt_input.Text, out tmp))
+			//double tmp = 0;
+			if (double.TryParse(txt_input.Text, out double tmp))
 			{
 				if (value == null || operation == ' ')
 				{
@@ -80,14 +80,14 @@ namespace Calculator
 				}
 				else
 				{
-					perform_calculation(tmp);
+					PerformCalculation(tmp);
 				}
 			}
 			Console.WriteLine(value);
 			txt_input.Text = "";
 		}
 
-		private void perform_calculation(double input)
+		private void PerformCalculation(double input)
 		{
 			switch (operation)
 			{
@@ -114,14 +114,14 @@ namespace Calculator
 		{
 			//if (txt_input.Text != "")
 			{
-				save_value();
+				SaveValue();
 				operation = 'x';
 			}
 		}
 
 		private void Btn_divide_Click(object sender, EventArgs e)
 		{
-			save_value();
+			SaveValue();
 			operation = '/';
 		}
 
@@ -134,6 +134,12 @@ namespace Calculator
 		{
 			txt_display.Text = "";
 			txt_input.Text = "";
+		}
+
+		private void PictureBox1_Click(object sender, EventArgs e)
+		{
+			DonutBox.Image = Images.Donut;
+			DonutBox.SizeMode = PictureBoxSizeMode.StretchImage;
 		}
 
 		private void Txt_Premium_Click(object sender, EventArgs e)
