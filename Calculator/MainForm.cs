@@ -99,7 +99,7 @@ namespace Calculator
 
 		private void PerformCalculation(double input)
 		{
-			switch (operation)
+			switch (_operation)
 			{
 				case '+':
 					if (_value == 9 && input == 10)
