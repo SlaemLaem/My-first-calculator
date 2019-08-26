@@ -49,9 +49,9 @@
 			this.txt_input = new System.Windows.Forms.Label();
 			this.txt_display = new System.Windows.Forms.Label();
 			this.btn_ce = new System.Windows.Forms.Button();
-			this.DonutBox = new System.Windows.Forms.PictureBox();
+			this.img_Donut = new System.Windows.Forms.PictureBox();
 			this.tableLayoutPanel1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.DonutBox)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.img_Donut)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// btn_2
@@ -249,9 +249,9 @@
 			this.tableLayoutPanel1.Controls.Add(this.txt_Premium, 0, 5);
 			this.tableLayoutPanel1.Controls.Add(this.txt_input, 0, 1);
 			this.tableLayoutPanel1.Controls.Add(this.txt_display, 0, 0);
-			this.tableLayoutPanel1.Controls.Add(this.btn_equal, 5, 4);
+			this.tableLayoutPanel1.Controls.Add(this.btn_equal, 4, 4);
 			this.tableLayoutPanel1.Controls.Add(this.btn_ce, 4, 2);
-			this.tableLayoutPanel1.Controls.Add(this.DonutBox, 2, 5);
+			this.tableLayoutPanel1.Controls.Add(this.img_Donut, 2, 5);
 			this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
 			this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
@@ -345,15 +345,16 @@
 			this.btn_ce.UseVisualStyleBackColor = true;
 			this.btn_ce.Click += new System.EventHandler(this.Btn_backspace_Click);
 			// 
-			// DonutBox
+			// img_Donut
 			// 
-			this.DonutBox.Location = new System.Drawing.Point(347, 358);
-			this.DonutBox.Name = "DonutBox";
-			this.DonutBox.Size = new System.Drawing.Size(166, 65);
-			this.DonutBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.DonutBox.TabIndex = 26;
-			this.DonutBox.TabStop = false;
-			this.DonutBox.Click += new System.EventHandler(this.PictureBox1_Click);
+			this.img_Donut.Location = new System.Drawing.Point(347, 358);
+			this.img_Donut.Name = "img_Donut";
+			this.img_Donut.Size = new System.Drawing.Size(166, 65);
+			this.img_Donut.TabIndex = 26;
+			this.img_Donut.TabStop = false;
+			this.img_Donut.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.img_Donut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.img_Donut.Click += new System.EventHandler(this.Img_Donut_Click);
 			// 
 			// MainForm
 			// 
@@ -366,7 +367,7 @@
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.tableLayoutPanel1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.DonutBox)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.img_Donut)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -393,7 +394,7 @@
 		private System.Windows.Forms.Label txt_Premium;
 		private System.Windows.Forms.Button btn_ce;
 		private System.Windows.Forms.Button btn_c;
-		private System.Windows.Forms.PictureBox DonutBox;
+		private System.Windows.Forms.PictureBox img_Donut;
 	}
 }
 

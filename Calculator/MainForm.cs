@@ -162,9 +162,9 @@ namespace Calculator
 			txt_input.Text = "";
 		}
 
-		private void PictureBox1_Click(object sender, EventArgs e)
+		private void Img_Donut_Click(object sender, EventArgs e)
 		{
-			DonutBox.Image = Images.Donut;
+			img_Donut.Image = (img_Donut.Image == null) ? Images.Donut : null;
 		}
 
 		private void Txt_Premium_Click(object sender, EventArgs e)
@@ -233,9 +233,9 @@ namespace Calculator
 			var filecontent = System.IO.File.ReadAllText(Path.Combine(docPath, "License.txt"));
 			var bytes = System.Convert.FromBase64String(filecontent);
 			filecontent = System.Text.Encoding.UTF8.GetString(bytes);
-			DateTime license_expiration = DateTime.Parse(filecontent);
-
-			if (license_expiration >= DateTime.Now) { SetPremium(); }
+			if (DateTime.TryParse(filecontent, out DateTime license_expiration)) {
+				if (license_expiration >= DateTime.Now) { SetPremium(); }
+			}
 		}
 	}
 }
