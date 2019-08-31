@@ -62,6 +62,7 @@
 			this.btn_2.Name = "btn_2";
 			this.btn_2.Size = new System.Drawing.Size(166, 65);
 			this.btn_2.TabIndex = 2;
+			this.btn_2.TabStop = false;
 			this.btn_2.Text = "2";
 			this.btn_2.UseVisualStyleBackColor = true;
 			this.btn_2.Click += new System.EventHandler(this.Btn_Number_Click);
@@ -74,6 +75,7 @@
 			this.btn_3.Name = "btn_3";
 			this.btn_3.Size = new System.Drawing.Size(166, 65);
 			this.btn_3.TabIndex = 3;
+			this.btn_3.TabStop = false;
 			this.btn_3.Text = "3";
 			this.btn_3.UseVisualStyleBackColor = true;
 			this.btn_3.Click += new System.EventHandler(this.Btn_Number_Click);
@@ -86,6 +88,7 @@
 			this.btn_4.Name = "btn_4";
 			this.btn_4.Size = new System.Drawing.Size(166, 65);
 			this.btn_4.TabIndex = 4;
+			this.btn_4.TabStop = false;
 			this.btn_4.Text = "4";
 			this.btn_4.UseVisualStyleBackColor = true;
 			this.btn_4.Click += new System.EventHandler(this.Btn_Number_Click);
@@ -98,6 +101,7 @@
 			this.btn_5.Name = "btn_5";
 			this.btn_5.Size = new System.Drawing.Size(166, 65);
 			this.btn_5.TabIndex = 5;
+			this.btn_5.TabStop = false;
 			this.btn_5.Text = "5";
 			this.btn_5.UseVisualStyleBackColor = true;
 			this.btn_5.Click += new System.EventHandler(this.Btn_Number_Click);
@@ -110,6 +114,7 @@
 			this.btn_6.Name = "btn_6";
 			this.btn_6.Size = new System.Drawing.Size(166, 65);
 			this.btn_6.TabIndex = 6;
+			this.btn_6.TabStop = false;
 			this.btn_6.Text = "6";
 			this.btn_6.UseVisualStyleBackColor = true;
 			this.btn_6.Click += new System.EventHandler(this.Btn_Number_Click);
@@ -122,6 +127,7 @@
 			this.btn_7.Name = "btn_7";
 			this.btn_7.Size = new System.Drawing.Size(166, 65);
 			this.btn_7.TabIndex = 7;
+			this.btn_7.TabStop = false;
 			this.btn_7.Text = "7";
 			this.btn_7.UseVisualStyleBackColor = true;
 			this.btn_7.Click += new System.EventHandler(this.Btn_Number_Click);
@@ -134,6 +140,7 @@
 			this.btn_8.Name = "btn_8";
 			this.btn_8.Size = new System.Drawing.Size(166, 65);
 			this.btn_8.TabIndex = 8;
+			this.btn_8.TabStop = false;
 			this.btn_8.Text = "8";
 			this.btn_8.UseVisualStyleBackColor = true;
 			this.btn_8.Click += new System.EventHandler(this.Btn_Number_Click);
@@ -146,6 +153,7 @@
 			this.btn_9.Name = "btn_9";
 			this.btn_9.Size = new System.Drawing.Size(166, 65);
 			this.btn_9.TabIndex = 9;
+			this.btn_9.TabStop = false;
 			this.btn_9.Text = "9";
 			this.btn_9.UseVisualStyleBackColor = true;
 			this.btn_9.Click += new System.EventHandler(this.Btn_Number_Click);
@@ -158,6 +166,7 @@
 			this.btn_0.Name = "btn_0";
 			this.btn_0.Size = new System.Drawing.Size(166, 65);
 			this.btn_0.TabIndex = 10;
+			this.btn_0.TabStop = false;
 			this.btn_0.Text = "0";
 			this.btn_0.UseVisualStyleBackColor = true;
 			this.btn_0.Click += new System.EventHandler(this.Btn_Number_Click);
@@ -170,6 +179,7 @@
 			this.btn_plus.Name = "btn_plus";
 			this.btn_plus.Size = new System.Drawing.Size(166, 65);
 			this.btn_plus.TabIndex = 11;
+			this.btn_plus.TabStop = false;
 			this.btn_plus.Text = "+";
 			this.btn_plus.UseVisualStyleBackColor = true;
 			this.btn_plus.Click += new System.EventHandler(this.Btn_plus_Click);
@@ -182,6 +192,7 @@
 			this.btn_minus.Name = "btn_minus";
 			this.btn_minus.Size = new System.Drawing.Size(166, 65);
 			this.btn_minus.TabIndex = 12;
+			this.btn_minus.TabStop = false;
 			this.btn_minus.Text = "-";
 			this.btn_minus.UseVisualStyleBackColor = true;
 			this.btn_minus.Click += new System.EventHandler(this.Btn_minus_Click);
@@ -194,6 +205,7 @@
 			this.btn_x.Name = "btn_x";
 			this.btn_x.Size = new System.Drawing.Size(166, 65);
 			this.btn_x.TabIndex = 13;
+			this.btn_x.TabStop = false;
 			this.btn_x.Text = "x";
 			this.btn_x.UseVisualStyleBackColor = true;
 			this.btn_x.Click += new System.EventHandler(this.Btn_x_Click);
@@ -206,6 +218,7 @@
 			this.btn_divide.Name = "btn_divide";
 			this.btn_divide.Size = new System.Drawing.Size(166, 65);
 			this.btn_divide.TabIndex = 14;
+			this.btn_divide.TabStop = false;
 			this.btn_divide.Text = "/";
 			this.btn_divide.UseVisualStyleBackColor = true;
 			this.btn_divide.Click += new System.EventHandler(this.Btn_divide_Click);
@@ -219,6 +232,7 @@
 			this.tableLayoutPanel1.SetRowSpan(this.btn_equal, 2);
 			this.btn_equal.Size = new System.Drawing.Size(106, 136);
 			this.btn_equal.TabIndex = 15;
+			this.btn_equal.TabStop = false;
 			this.btn_equal.Text = "=";
 			this.btn_equal.UseVisualStyleBackColor = true;
 			this.btn_equal.Click += new System.EventHandler(this.Btn_equal_Click);
@@ -275,6 +289,7 @@
 			this.btn_c.Name = "btn_c";
 			this.btn_c.Size = new System.Drawing.Size(106, 65);
 			this.btn_c.TabIndex = 25;
+			this.btn_c.TabStop = false;
 			this.btn_c.Text = "C";
 			this.btn_c.UseVisualStyleBackColor = true;
 			this.btn_c.Click += new System.EventHandler(this.Btn_c_Click);
@@ -287,6 +302,7 @@
 			this.btn_1.Name = "btn_1";
 			this.btn_1.Size = new System.Drawing.Size(166, 65);
 			this.btn_1.TabIndex = 18;
+			this.btn_1.TabStop = false;
 			this.btn_1.Text = "1";
 			this.btn_1.UseVisualStyleBackColor = true;
 			this.btn_1.Click += new System.EventHandler(this.Btn_Number_Click);
@@ -341,19 +357,20 @@
 			this.btn_ce.Name = "btn_ce";
 			this.btn_ce.Size = new System.Drawing.Size(106, 65);
 			this.btn_ce.TabIndex = 24;
+			this.btn_ce.TabStop = false;
 			this.btn_ce.Text = "CE";
 			this.btn_ce.UseVisualStyleBackColor = true;
 			this.btn_ce.Click += new System.EventHandler(this.Btn_backspace_Click);
 			// 
 			// img_Donut
 			// 
+			this.img_Donut.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.img_Donut.Location = new System.Drawing.Point(347, 358);
 			this.img_Donut.Name = "img_Donut";
 			this.img_Donut.Size = new System.Drawing.Size(166, 65);
+			this.img_Donut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.img_Donut.TabIndex = 26;
 			this.img_Donut.TabStop = false;
-			this.img_Donut.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.img_Donut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.img_Donut.Click += new System.EventHandler(this.Img_Donut_Click);
 			// 
 			// MainForm
@@ -362,9 +379,11 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.Controls.Add(this.tableLayoutPanel1);
+			this.KeyPreview = true;
 			this.Name = "MainForm";
 			this.Text = "JohnBobbyCalculator";
 			this.Load += new System.EventHandler(this.Form1_Load);
+			this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainForm_KeyPress);
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.tableLayoutPanel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.img_Donut)).EndInit();
