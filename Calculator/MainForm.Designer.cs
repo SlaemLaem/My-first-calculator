@@ -328,7 +328,7 @@
 			this.txt_input.AutoSize = true;
 			this.tableLayoutPanel1.SetColumnSpan(this.txt_input, 5);
 			this.txt_input.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.txt_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txt_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_input.Location = new System.Drawing.Point(3, 71);
 			this.txt_input.Name = "txt_input";
 			this.txt_input.Size = new System.Drawing.Size(794, 71);
@@ -341,7 +341,7 @@
 			this.txt_display.AutoSize = true;
 			this.tableLayoutPanel1.SetColumnSpan(this.txt_display, 5);
 			this.txt_display.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.txt_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txt_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_display.Location = new System.Drawing.Point(3, 0);
 			this.txt_display.Name = "txt_display";
 			this.txt_display.Size = new System.Drawing.Size(794, 71);
