@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\GameState\TicTacDoom.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +58,12 @@
     </Compile>
     <Compile Include="StartupMessageForm.Designer.cs">
       <DependentUpon>StartupMessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicTacDoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicTacDoom.Designer.cs">
+      <DependentUpon>TicTacDoom.cs</DependentUpon>
     </Compile>
     <Compile Include="WalletForm.cs">
       <SubType>Form</SubType>
@@ -76,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StartupMessageForm.resx">
       <DependentUpon>StartupMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicTacDoom.resx">
+      <DependentUpon>TicTacDoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WalletForm.resx">
       <DependentUpon>WalletForm.cs</DependentUpon>
@@ -134,6 +144,12 @@
     <Content Include="License.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\X.png" />
+    <None Include="Resources\Flat-Earth.png" />
+    <None Include="Resources\SummoningCircle.png" />
+    <None Include="Resources\trident.png" />
+    <None Include="Resources\Cross.png" />
+    <None Include="Resources\Circle.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

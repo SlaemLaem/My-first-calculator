@@ -76,7 +76,6 @@ namespace Calculator
 
 		private void SaveValue()
 		{
-			//double tmp = 0;
 			if (double.TryParse(txt_input.Text, out double tmp))
 			{
 				txt_input.Text = "";
@@ -97,14 +96,19 @@ namespace Calculator
 					var text = (_premium) ? "Ok, here you go.\n\n        ( . ) ( . )\n          )  .  (" : "Find your porn elsewhere...";
 					MessageBox.Show(text, caption, MessageBoxButtons.OK);
 				}
-				if (_value == 2005)
+				else if (_value == 1134)
+				{
+					var popup = new TicTacDoom();
+					popup.ShowDialog();
+				}
+				else if (_value == 2005)
 				{
 					if (_premium == false) { txt_display.Text = "You need premium"; }
 					var caption = (_premium) ? "Premium feature" : "Your close";
 					var text = (_premium) ? "My birthday?" : "Try premium";
 					MessageBox.Show(text, caption, MessageBoxButtons.OK);
 				}
-				if (_value == 2606)
+				else if (_value == 2606)
 				{
 					if (_premium == false) { txt_display.Text = "You need premium"; }
 					var caption = (_premium) ? "Premium feature" : "Your close";
